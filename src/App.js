@@ -19,7 +19,7 @@ const themeLight = createTheme({
     },
   },
   typography: {
-    fontFamily: 'Space Grotesk, sans-serif',
+    fontFamily: 'Noto Sans, sans-serif',
   },
 });
 
@@ -34,7 +34,7 @@ const themeDark = createTheme({
     },
   },
   typography: {
-    fontFamily: 'Space Grotesk, sans-serif',
+    fontFamily: 'Noto Sans, sans-serif',
   },
 });
 
@@ -63,8 +63,12 @@ function App() {
       audioRef.current.play();
     }
 
+    if (bedTime && time.getHours() === bedTime.getHours() && time.getMinutes() === bedTime.getMinutes()) {
+      audioRef.current.play();
+    }
+
     return () => clearInterval(timer);
-  }, [time, alarmTime]);
+  }, [time, alarmTime, bedTime]);
 
   const handleAlarmSubmit = () => {
     const [hours, minutes] = document.getElementById('alarm-time').value.split(':');
