@@ -58,6 +58,6 @@ This project is a digital clock application that displays the current time and d
 - Vercel: Cloud platform for static sites and Serverless Functions
 
 ## Deployed Site
-
+[Digital Clock](https://digital-clock-mu-swart.vercel.app/)
 
 
